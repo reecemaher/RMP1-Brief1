@@ -41,6 +41,27 @@ void draw(){
      
    }
    
+   if(keyCode == RIGHT && keyPressed == true){
+     
+     allCircles[i][0] += movement;
+     
+     
+   }
+   
+   if(keyCode == UP && keyPressed == true){
+     
+     allCircles[i][1] -= movement;
+     
+     
+   }
+   
+   if(keyCode == DOWN && keyPressed == true){
+     
+     allCircles[i][1] += movement;
+     
+     
+   }
+   
  }
   
   

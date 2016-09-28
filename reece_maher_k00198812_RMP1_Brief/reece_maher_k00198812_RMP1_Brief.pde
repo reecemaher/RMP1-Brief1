@@ -45,6 +45,21 @@ void draw(){
    fill(randColor[i]);
   ellipse(allCircles[i][0], allCircles[i][1], allCircles[i][2], allCircles[i][2]); 
   
+  
+  if(dist(allCircles[i][0], allCircles[i][1], mouseX,mouseY) < allCircles[i][2]/2){
+    stroke(255); 
+    
+    if(mousePressed == true){
+      allCircles[i][0] = random(width);
+      allCircles[i][1] = random(height);
+      allCircles[i][2] = random(10,50);
+    }
+    
+  }
+  else{
+    stroke(0);
+  }
+  
    //0 represents the x axis of the array circle and is used to move the circles left and right
    if(keyCode == LEFT && keyPressed == true){
      

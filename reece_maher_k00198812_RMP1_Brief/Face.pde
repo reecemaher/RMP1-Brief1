@@ -1,6 +1,7 @@
 class Face{
  
 float size = 200;  
+color faceColour = color(random(255), random(255), random(255));
   
 Face(){
   
@@ -13,7 +14,8 @@ void paint(int xPos,int yPos){
   
   translate(xPos, yPos);
   
-  rect(0,0,size,size);
+  fill(faceColour);
+  ellipse(0,0,size,size);
   
   popMatrix();
   

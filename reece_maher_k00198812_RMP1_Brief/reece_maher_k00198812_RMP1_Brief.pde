@@ -3,6 +3,7 @@
 float [][] allCircles = new float[20][];
 color [] randColor = new color[20];
 color bcColor = color(random(255),random(255), random(255));
+int movement = 5;
 
 void setup()
 {
@@ -18,17 +19,27 @@ void setup()
  circle[2] = random(10,50);
  
  allCircles[r] = circle;
+ //random color 
   randColor[r] = color(random(255),random(255), random(255));
   }
   
 }
 
 void draw(){
+  background(bcColor);
   //for loop to obtain all the figures to draw out to 20 circles
  for(int i =0; i <allCircles.length; i++){
+   
    fill(randColor[i]);
   ellipse(allCircles[i][0], allCircles[i][1], allCircles[i][2], allCircles[i][2]); 
+  
    
+   if(keyCode == LEFT && keyPressed == true){
+     
+     allCircles[i][0] -= movement;
+     
+     
+   }
    
  }
   

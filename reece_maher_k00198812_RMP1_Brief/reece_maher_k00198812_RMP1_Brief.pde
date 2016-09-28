@@ -1,10 +1,14 @@
+
+//2D array to hold 20 rows 
 float [][] allCircles = new float[20][];
-
-
+color [] randColor = new color[20];
+color bcColor = color(random(255),random(255), random(255));
 
 void setup()
 {
   size(800,800);
+  background(bcColor);
+  //for loop to create 20 arrays named circle with 3 random values(x,y and radius) and then place the circle into the 2D array
   for(int r=0; r <allCircles.length ; r++){
     
  float[] circle = new float[3];
@@ -14,13 +18,15 @@ void setup()
  circle[2] = random(10,50);
  
  allCircles[r] = circle;
-  
+  randColor[r] = color(random(255),random(255), random(255));
   }
   
 }
 
 void draw(){
+  //for loop to obtain all the figures to draw out to 20 circles
  for(int i =0; i <allCircles.length; i++){
+   fill(randColor[i]);
   ellipse(allCircles[i][0], allCircles[i][1], allCircles[i][2], allCircles[i][2]); 
    
    

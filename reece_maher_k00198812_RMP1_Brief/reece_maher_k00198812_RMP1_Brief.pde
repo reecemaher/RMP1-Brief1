@@ -64,6 +64,11 @@ void draw(){
    if(keyCode == LEFT && keyPressed == true){
      
      allCircles[i][0] -= movement;
+      if(allCircles[i][0] < 0)
+     {
+      allCircles[i][0] = width+allCircles[i][2]; 
+     }
+    
      
      
    }
@@ -71,7 +76,10 @@ void draw(){
    if(keyCode == RIGHT && keyPressed == true){
      
      allCircles[i][0] += movement;
-     
+      if(allCircles[i][0] > width)
+     {
+      allCircles[i][0] = 0-allCircles[i][2]; 
+     }
      
    }
    //0 represents the y axis of the array circle and is used to move the circles up and down

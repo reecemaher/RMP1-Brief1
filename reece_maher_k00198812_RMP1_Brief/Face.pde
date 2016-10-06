@@ -37,11 +37,24 @@ void paint(int xPos,int yPos){
   
   quad(-35,40,35,40,38,34,-38,34);
   
-  triangle(
+  fill(0);
+  triangle(-25,50, 0,75, 25,50);
   
   //simple line for current mouth
   //stroke(255);
-  //line(-40,30,40,30);
+  noFill();
+  noStroke();
+  line(-20,5,-5,15);
+  line(-40,5,-30,15);
+  stroke(0);
+  bezier(-20,5,-25,7,-29,9,-34,19);
+  
+  noFill();
+  noStroke();
+  line(20,5,5,15);
+  line(40,5,30,15);
+  stroke(0);
+  bezier(20,5,25,7,29,9,34,19);
   
   //arc(0,26,95,50,0, HALF_PI);
   stroke(0);

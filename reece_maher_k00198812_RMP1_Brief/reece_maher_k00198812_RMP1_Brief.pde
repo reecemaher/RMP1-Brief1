@@ -86,14 +86,20 @@ void draw(){
    if(keyCode == UP && keyPressed == true){
      
      allCircles[i][1] -= movement;
-     
+      if(allCircles[i][1] < 0)
+     {
+      allCircles[i][1] = height+allCircles[i][2]; 
+     }
      
    }
    
    if(keyCode == DOWN && keyPressed == true){
      
      allCircles[i][1] += movement;
-     
+      if(allCircles[i][1] > height)
+     {
+      allCircles[i][1] = 0+allCircles[i][2]; 
+     }
      
    }
    
